@@ -22,9 +22,9 @@ set(scripts_STAT_SRCS
 		Custom/pvp.cpp
 		Custom/DuelCD.cpp
   		Custom/npc_info.cpp
-		Custom/Professions_NPC.cpp
-		
-
+		Custom/skill_npc.cpp
+		Custom/tele.cpp
+		Custom/vip.cpp
 )
 
 message("  -> Prepared: Custom")

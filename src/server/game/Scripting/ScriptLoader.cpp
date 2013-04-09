@@ -1300,7 +1300,8 @@ void AddBattlegroundScripts()
 	void AddSC_Duel_Reset();
 	void AddSC_npc_info();
 	void AddSC_skill_npc();
-
+	void AddSC_TeLe_gossip_codebox();
+	void AddSC_vipcommands();
 
 
 	
@@ -1319,8 +1320,9 @@ void AddCustomScripts()
 	AddSC_PvPToken_NPC();
 	AddSC_Duel_Reset();
 	AddSC_npc_info();
-	void AddSC_skill_npc();
-	
+	AddSC_skill_npc();
+	AddSC_TeLe_gossip_codebox();
+	AddSC_vipcommands();
 
 	
 #endif
