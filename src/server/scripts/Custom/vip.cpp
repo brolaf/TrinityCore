@@ -25,7 +25,6 @@ public:
 			{ "buff",	    SEC_MODERATOR,     true, &HandleVipMallCommand,         "", NULL },
 			{ "duel",	    SEC_MODERATOR,     true, &HandleVipMallCommand,         "", NULL },
 			{ "arena",	    SEC_MODERATOR,     true, &HandleVipMallCommand,         "", NULL },
-			{ "teleport",	    SEC_MODERATOR,     true, &HandleVipMallCommand,         "", NULL },
             { "changerace",    SEC_MODERATOR,  false, &HandleChangeRaceCommand,             "", NULL },
 	    { "changefaction",	SEC_MODERATOR,  false, &HandleChangeFactionCommand,		"", NULL },
 	    { "customize",	SEC_MODERATOR,  false, &HandleCustomizeCommand,		"", NULL },
@@ -205,33 +204,6 @@ static bool HandleVipDuelCommand(ChatHandler* handler, const char* args)
                 return true;
     }
 
-static bool HandleArenaCommand(ChatHandler* handler, const char* args)
-    {
-    Player* me = handler->GetSession()->GetPlayer();
-	if(me->GetArenaTeamId(1) != 0)
-	{
-	me->AddBattlegroundQueueId(BATTLEGROUND_QUEUE_2v2);
-    }
-	else
-	{
-		handler->PSendSysMessage("You are not in an Arena Team!");
-	}
-	return true;
-	}
-
-static bool HandleTeleportCommand(ChatHandler* handler, const char* args)
-    {
-    Player* me = handler->GetSession()->GetPlayer();
-	if(me->GetTeleportId(1) != 500158)
-	{
-	me->AddTeleporterId(Teleporter);
-    }
-	else
-	{
-		handler->PSendSysMessage("Select Zone");
-	}
-	return true;
-	}
 	
 
 };
