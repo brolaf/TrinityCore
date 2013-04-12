@@ -12882,6 +12882,8 @@ void Unit::ModSpellCastTime(SpellInfo const* spellProto, int32 & castTime, Spell
     else if (spellProto->Attributes & SPELL_ATTR0_REQ_AMMO && !(spellProto->AttributesEx2 & SPELL_ATTR2_AUTOREPEAT_FLAG))
         castTime = int32(float(castTime) * m_modAttackSpeedPct[RANGED_ATTACK]);
     else if (spellProto->SpellVisual[0] == 3881 && HasAura(67556)) // cooking with Chef Hat.
+	if(spellProto->Effects[0].Effect == SPELL_EFFECT_ENCHANT_ITEM || spellProto->Effects[0].Effect == SPELL_EFFECT_APPLY_GLYPH || spellProto->Effects[0].Effect == SPELL_EFFECT_ENCHANT_ITEM_PRISMATIC)
+castTime = 1;
         castTime = 500;
 }
 

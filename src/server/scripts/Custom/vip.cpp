@@ -10,6 +10,7 @@
 #include "Chat.h"
 #include "Common.h"
 #include "Language.h"
+#include "ScriptPch.h"
 
 class vipcommands : public CommandScript
 {
